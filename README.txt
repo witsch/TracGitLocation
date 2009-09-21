@@ -1,8 +1,8 @@
-= Subversion Location =
+= Git Location =
 
 == Description ==
 
-Adds a Subversion Location link to the contextual navigation under Browse Source. The link points to the Subversion URL for the folder you're viewing. This is very handy for making checkouts and such.
+Adds a Git Location link to the contextual navigation under Browse Source. The link points to the Git URL for the folder you're viewing. This is very handy for making checkouts and such.
 
 == Installation ==
 
@@ -12,13 +12,13 @@ Under the [components] section, enable the plugin:
 
 {{{
 [components]
-subversionlocation.* = enabled
+gitlocation.* = enabled
 }}}
 
 Finally, add a section to your project's trac.ini:
 
 {{{
-[svn]
+[git]
 repository_url = https://your.repository/location
 }}}
 
@@ -26,13 +26,9 @@ Drink, and enjoy.
 
 == Author ==
 
-Subversion Location is written by Erik Rose and based on jhammel's [http://trac-hacks.org/wiki/SvnUrlsPlugin SvnUrlsPlugin]. Thanks, jhammel!
+Git Location is a shameless rip-off of Erik Rose' Subversion Location plugin and therefore also based on jhammel's [http://trac-hacks.org/wiki/SvnUrlsPlugin SvnUrlsPlugin]. Thanks, Erik & jhammel!
 
 == Version History ==
 
- 1.0.1::
-  * The Browse Source tab now highlights properly. Thanks to Jeremie Allard for the original patch.
-  * Added egg dependency on Trac, which this of course imports from.
-  * Fleshed out other egg metadata a bit.
  1.0::
   Initial release
