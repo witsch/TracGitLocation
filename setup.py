@@ -8,7 +8,7 @@ setup(
     url='http://trac-hacks.org/wiki/GitLocationPlugin',
     classifiers = [
         'Framework :: Trac',
-        'Development Status :: 4 - Production/Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Natural Language :: English',
         'Operating System :: OS Independent',
