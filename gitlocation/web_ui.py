@@ -13,7 +13,9 @@ def prepend_ctxtnav(req, elm_or_label, href):
     
     add_ctxtnav(), sadly, always appends to the right side of the (right-aligned by default) context nav, changing the onscreen locations of the links people are already used to.
     """
-    elm = tag(elm_or_label, ':', href)
+    elm = tag(tag.label(elm_or_label, for_='rev'), ' ',
+              tag.input(type='text', id='rev', readonly='readonly',
+                        value=href, size=len(href)))
     req.chrome.setdefault('ctxtnav', []).insert(0, elm)
 
 class BrowserLinkAdder(Component):
@@ -36,5 +38,5 @@ class BrowserLinkAdder(Component):
         """Stick the Git Location link in the contextual nav when applicable."""
         match = self.pattern.match(req.path_info)
         if match:
-            prepend_ctxtnav(req, 'Git Location', self.url())
+            prepend_ctxtnav(req, 'Git location', self.url())
         return template, data, content_type
