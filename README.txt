@@ -2,7 +2,7 @@
 
 == Description ==
 
-Adds a Git Location link to the contextual navigation under Browse Source. The link points to the Git URL for the folder you're viewing. This is very handy for making checkouts and such.
+Adds the Git Location to the contextual navigation under Browse Source.  Even though with Git this info is static, i.e. it doesn't change depending on which folder is browsed in Trac, it still comes in handy for making checkouts and such.
 
 [[Image(screenshot.png)]]
 
